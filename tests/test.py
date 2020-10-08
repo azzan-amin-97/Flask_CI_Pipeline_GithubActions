@@ -20,5 +20,6 @@ class BasicTests(unittest.TestCase):
         # Then
         self.assertEqual(result, 300)
 
+
 if __name__ == "__main__":
     unittest.main()
