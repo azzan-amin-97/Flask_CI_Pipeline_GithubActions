@@ -5,7 +5,7 @@ import requests
 
 class BasicTests(unittest.TestCase):
 
-    def addition_test(self):
+    def test_addition_test(self):
         # Given
         num1 = 100
         num2 = 200
