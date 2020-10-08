@@ -19,20 +19,65 @@ class Addition(Resource):
         return jsonify(result=result)
 
 
+class Subtration(Resource):
+    def post(self):
+        numbers = request.form.to_dict()
+        num = []
+        # Append the dateRange(Dict) value into dateList
+        for key, value in numbers.items():
+            temp = value
+            num.append(temp)
+        num1 = int(num[0])
+        num2 = int(num[1])
+        result = num1 - num2
+        return jsonify(result=result)
+
+
+class Multiplication(Resource):
+    def post(self):
+        numbers = request.form.to_dict()
+        num = []
+        # Append the dateRange(Dict) value into dateList
+        for key, value in numbers.items():
+            temp = value
+            num.append(temp)
+        num1 = int(num[0])
+        num2 = int(num[1])
+        result = num1 * num2
+        return jsonify(result=result)
+
+
+class Division(Resource):
+    def post(self):
+        numbers = request.form.to_dict()
+        num = []
+        # Append the dateRange(Dict) value into dateList
+        for key, value in numbers.items():
+            temp = value
+            num.append(temp)
+        num1 = int(num[0])
+        num2 = int(num[1])
+        result = num1 / num2
+        return jsonify(result=result)
+
+
 api = Api(app)
 api.add_resource(Addition, '/api/addition')
+api.add_resource(Subtration, '/api/subtraction')
+api.add_resource(Multiplication, '/api/multiplication')
+api.add_resource(Division, '/api/division')
 
 
-@app.route('/')
-def add():
-    num1 = 100
-    num2 = 200
-    response = requests.post("http://127.0.0.1:5000/api/reports",
-                             data={'num1': num1,
-                                   'num2': num2})
-    r_json = response.json()
-    result = r_json['result']
-    return jsonify(result=result)
+# @app.route('/')
+# def add():
+#     num1 = 100
+#     num2 = 200
+#     response = requests.post("http://127.0.0.1:5000/api/reports",
+#                              data={'num1': num1,
+#                                    'num2': num2})
+#     r_json = response.json()
+#     result = r_json['result']
+#     return jsonify(result=result)
 
 
 if __name__ == "__main__":
