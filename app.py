@@ -68,17 +68,5 @@ api.add_resource(Multiplication, '/api/multiplication')
 api.add_resource(Division, '/api/division')
 
 
-# @app.route('/')
-# def add():
-#     num1 = 100
-#     num2 = 200
-#     response = requests.post("http://127.0.0.1:5000/api/reports",
-#                              data={'num1': num1,
-#                                    'num2': num2})
-#     r_json = response.json()
-#     result = r_json['result']
-#     return jsonify(result=result)
-
-
 if __name__ == "__main__":
     app.run()
