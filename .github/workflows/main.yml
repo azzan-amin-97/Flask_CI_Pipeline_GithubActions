@@ -19,12 +19,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      
+      # Set up Python Version
       - name: Set up Python 3.6
         uses: actions/setup-python@v2
       
+      # Install all the app dependencies
       - name: Install dependencies
         run: pip install -r requirements.txt
       
+      # Build the app and run tests
       - name: Build and Run Test
         run: python app.py & python -m unittest test
