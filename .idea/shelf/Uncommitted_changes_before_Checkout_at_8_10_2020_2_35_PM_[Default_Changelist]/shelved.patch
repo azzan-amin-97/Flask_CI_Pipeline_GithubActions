@@ -1,0 +1,15 @@
+Index: test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import unittest\r\n\r\nimport requests\r\n\r\n\r\nclass BasicTests(unittest.TestCase):\r\n    def test_view_report(self):\r\n        # Given\r\n        num1 = 100\r\n        num2 = 200\r\n\r\n        # When\r\n        response = requests.post(\"http://127.0.0.1:5000/api/addition\",\r\n                                 data={'num1': num1,\r\n                                       'num2': num2})\r\n\r\n        res_json = response.json()\r\n        result = res_json['result']\r\n\r\n        # Then\r\n        self.assertEqual(result, 300)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    unittest.main()\r\n\r\n    
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- test.py	(revision eb5fc16c01fc88383ae5cff8830dfdf3cd5c2490)
++++ test.py	(date 1602138558838)
+@@ -24,4 +24,3 @@
+ if __name__ == "__main__":
+     unittest.main()
+ 
+-    
+\ No newline at end of file
