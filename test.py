@@ -4,7 +4,7 @@ import requests
 
 
 class BasicTests(unittest.TestCase):
-    def test_view_report(self):
+    def addition_test(self):
         # Given
         num1 = 100
         num2 = 200
