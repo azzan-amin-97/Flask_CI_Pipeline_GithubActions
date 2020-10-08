@@ -20,7 +20,6 @@ class Addition(Resource):
 
 
 api = Api(app)
-
 api.add_resource(Addition, '/api/addition')
 
 
