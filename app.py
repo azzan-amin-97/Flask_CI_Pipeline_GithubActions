@@ -31,11 +31,8 @@ def add():
     response = requests.post("http://127.0.0.1:5000/api/reports",
                              data={'num1': num1,
                                    'num2': num2})
-
     r_json = response.json()
-
     result = r_json['result']
-
     return jsonify(result=result)
 
 
