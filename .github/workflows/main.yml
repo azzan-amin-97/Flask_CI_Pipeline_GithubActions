@@ -30,4 +30,4 @@ jobs:
       
       # Build the app and run tests
       - name: Build and Run Test
-        run: python app.py & python -m unittest test
+        run: python app.py & python -m unittest run_test
