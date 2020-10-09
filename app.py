@@ -67,6 +67,5 @@ api.add_resource(Subtration, '/api/subtraction')
 api.add_resource(Multiplication, '/api/multiplication')
 api.add_resource(Division, '/api/division')
 
-
 if __name__ == "__main__":
     app.run()
