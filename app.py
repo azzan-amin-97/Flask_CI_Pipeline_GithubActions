@@ -51,7 +51,6 @@ class Division(Resource):
     def post(self):
         numbers = request.form.to_dict()
         num = []
-        
         # Append the dateRange(Dict) value into dateList
         for key, value in numbers.items():
             temp = value
