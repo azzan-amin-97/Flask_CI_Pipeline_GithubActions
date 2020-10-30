@@ -19,7 +19,7 @@ class BasicTests(unittest.TestCase):
         result = res_json['result']
 
         # Then
-        self.assertEqual(result, 800)
+        self.assertEqual(result, 900)
     
     def test_subtraction(self):
         # Given
