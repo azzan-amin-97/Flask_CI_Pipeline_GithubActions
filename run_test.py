@@ -8,7 +8,7 @@ class BasicTests(unittest.TestCase):
     def test_addition(self):
         # Given
         num1 = 400
-        num2 = 200
+        num2 = 400
 
         # When
         response = requests.post("http://127.0.0.1:5000/api/addition",
@@ -19,7 +19,7 @@ class BasicTests(unittest.TestCase):
         result = res_json['result']
 
         # Then
-        self.assertEqual(result, 600)
+        self.assertEqual(result, 800)
     
     def test_subtraction(self):
         # Given
