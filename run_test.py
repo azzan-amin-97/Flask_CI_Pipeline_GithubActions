@@ -7,7 +7,7 @@ class BasicTests(unittest.TestCase):
 
     def test_addition(self):
         # Given
-        num1 = 100
+        num1 = 200
         num2 = 200
 
         # When
@@ -19,7 +19,7 @@ class BasicTests(unittest.TestCase):
         result = res_json['result']
 
         # Then
-        self.assertEqual(result, 300)
+        self.assertEqual(result, 400)
     
     def test_subtraction(self):
         # Given
